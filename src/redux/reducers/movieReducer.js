@@ -3,6 +3,7 @@ import * as actionTypes from "../actions/actionTypes";
 const initialState = {
   watchList: [],
   watchedList: [],
+  active: "watchList",
 };
 
 const movieReducer = (state = initialState, action) => {

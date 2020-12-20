@@ -35,8 +35,22 @@
   border-radius: 5px;
   padding: 0.1em 0.9rem;
   color: white;
-  background-color: rgb(59, 100, 234);
+  cursor: pointer;
+  background-color: #217194;
+  transition: 0.4s linear;
+}
+.button:hover {
+  background-color: #183f50;
 }
 .button:disabled {
   background-color: rgb(71, 81, 113);
+  cursor: not-allowed;
+}
+
+@media only screen and (max-width: 700px) {
+  .button {
+    font-size: 1rem;
+    margin: 1px;
+    padding: 0.01rem 0.01rem;
+  }
 }

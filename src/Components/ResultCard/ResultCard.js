@@ -23,7 +23,7 @@ const ResultCard = (props) => {
             alt={`${props.data.movie_title}poster`}
           />
         ) : (
-          <div className={classes.image}></div>
+          <div className={classes.image}>Poster Image</div>
         )}
         {props.data.original_title && props.data.release_date ? (
           <div className={classes.titleDiv}>
@@ -51,7 +51,7 @@ const ResultCard = (props) => {
             </div>
           </div>
         ) : (
-          <div></div>
+          <div>No Information Available</div>
         )}
       </div>
     </div>

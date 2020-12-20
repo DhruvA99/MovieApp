@@ -50,7 +50,7 @@ const Modal = (props) => {
             <div className={classes.image}></div>
           )}
           <div className={classes.insideContainer}>
-            <h3>{props.item.original_title}</h3>
+            <span className={classes.heading}>{props.item.original_title}</span>
             <p>
               <small>{props.item.release_date}</small>
             </p>

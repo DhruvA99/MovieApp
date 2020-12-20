@@ -21,7 +21,7 @@ class WatchList extends Component {
     });
   };
   render() {
-    let list = <p>No Movies in your List</p>;
+    let list = <p className={classes.emptyText}> No Movies in your List!</p>;
     if (this.props.watchList.length !== 0) {
       list = this.props.watchList.map((item) => {
         return (
@@ -44,7 +44,7 @@ class WatchList extends Component {
     }
     return (
       <div>
-        <Navbar heading="WatchList" />
+        <Navbar heading1="Watch" heading2="List" />
         <div className={classes.movieList}>
           {list}
           {this.state.infoContainer ? (

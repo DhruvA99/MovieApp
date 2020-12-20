@@ -3,6 +3,10 @@
   flex-wrap: wrap;
   justify-content: left;
 }
+.emptyText {
+  padding: 10px;
+  font-weight: bold;
+}
 
 .visible {
   visibility: hidden;

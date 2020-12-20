@@ -44,7 +44,7 @@ class AddPage extends Component {
   render() {
     return (
       <div className={classes.addPage}>
-        <Navbar heading="Search" />
+        <Navbar heading1=" Search" heading2="Page" />
         <div className={classes.container}>
           <div className={classes.inputDiv}>
             <input

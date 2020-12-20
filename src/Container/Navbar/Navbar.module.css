@@ -1,11 +1,41 @@
+@import url("https://fonts.googleapis.com/css2?family=Langar&display=swap");
+
 .nav {
-  background-color: grey;
+  background-color: #831843;
   display: flex;
   color: white;
+  width: 100%;
   justify-content: space-around;
+}
+.heading {
+  font-family: "Langar", cursive;
+  font-size: 2rem;
+  padding: 0.8rem;
+}
+.headingText {
+  color: rgb(15, 188, 15);
 }
 
 .navList {
   display: flex;
   padding: 1rem;
+}
+
+.item {
+  padding: 0.7rem;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: white;
+}
+@media only screen and (max-width: 700px) {
+  .nav {
+    flex-direction: column;
+  }
+  .navList {
+    flex-direction: column;
+  }
+  .sideDrawer {
+    display: none;
+  }
 }

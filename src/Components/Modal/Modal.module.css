@@ -8,6 +8,14 @@
   z-index: 1;
   overflow-y: scroll;
 }
+.heading {
+  font-size: 2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+small {
+  font-weight: bold;
+}
 
 .close {
   color: #aaaaaa;
@@ -43,11 +51,12 @@
 }
 .insideContainer {
   padding: 1rem;
+  position: relative;
 }
 
 .description {
-  word-wrap: break-word;
   text-align: justify;
+  font-size: 1rem;
 }
 .insideButtonDiv {
   display: flex;
@@ -58,10 +67,16 @@
   margin: 3px;
   padding: 0.8rem;
   color: white;
-  background-color: rgb(64, 110, 209);
+  border: none;
+  border-radius: 10px;
+  background-color: #217194;
+  transition: 0.4s linear;
+}
+.insideButton:hover {
+  background-color: rgb(24, 48, 104);
 }
 
-@media only screen and (min-width: 701px) {
+@media only screen and (min-width: 990px) {
   .modal {
     top: 0;
   }
