@@ -1,0 +1,28 @@
+.movieList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: left;
+}
+
+.card {
+  flex-basis: 20%;
+  position: relative;
+}
+
+.button {
+  padding: 1rem;
+}
+.buttonDiv {
+  display: flex;
+  color: white;
+  position: absolute;
+  cursor: pointer;
+  top: 40%;
+  left: 24%;
+}
+
+@media only screen and (max-width: 700px) {
+  .card {
+    margin: auto;
+  }
+}

@@ -1,0 +1,11 @@
+.nav {
+  background-color: grey;
+  display: flex;
+  color: white;
+  justify-content: space-around;
+}
+
+.navList {
+  display: flex;
+  padding: 1rem;
+}

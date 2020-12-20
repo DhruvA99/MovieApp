@@ -1,0 +1,42 @@
+.resultCard {
+  margin: auto;
+}
+
+.card {
+  border: 0 0.5px 0 0.5px solid black;
+  height: 150px;
+  display: flex;
+}
+
+.image {
+  height: 90%;
+  width: 80px;
+  margin: auto 20px;
+}
+
+.titleDiv {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+.title {
+  font-size: 1.4rem;
+  padding: 4px 2px;
+}
+.buttonDiv {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 20px;
+}
+.button {
+  font-size: 1.3rem;
+  margin: 10px;
+  border-radius: 5px;
+  padding: 0.1em 0.9rem;
+  color: white;
+  background-color: rgb(59, 100, 234);
+}
+.button:disabled {
+  background-color: rgb(71, 81, 113);
+}

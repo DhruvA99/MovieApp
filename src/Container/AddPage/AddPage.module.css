@@ -1,0 +1,20 @@
+.inputDiv {
+  margin: 20px auto 0 auto;
+}
+
+.Input {
+  margin: 10px 20px 0 20px;
+  width: 70%;
+  height: 40px;
+}
+.resultList {
+  width: 70.8%;
+  margin: 0 auto 20px auto;
+}
+
+.searchDropdown {
+  border-top: 0;
+  border-left: 0.6px solid black;
+  border-right: 0.6px solid black;
+  border-bottom: 0.6px solid black;
+}
