@@ -4,31 +4,40 @@ import CardComponent from "../../Components/CardComponent/CardComponent";
 import Navbar from "../Navbar/Navbar";
 import classes from "./WatchedList.module.css";
 import { deleteWatchedList } from "../../redux/actions/actionCreator";
+import Modal from "../../Components/Modal/Modal";
 
 class WatchedList extends Component {
+  state = {
+    infoContainer: false,
+    modalData: null,
+  };
+
+  modalCloseHandler = () => {
+    this.setState({ infoContainer: false });
+  };
+
+  infoClickHandler = (item) => {
+    this.setState({
+      infoContainer: true,
+      modalData: item,
+    });
+  };
   render() {
     let list = <p>No Movies in your List</p>;
     if (this.props.watchedList.length !== 0) {
       list = this.props.watchedList.map((item) => {
         return (
-          <div className={classes.card}>
-            <CardComponent key={item.id} item={item} />
-            <div className={classes.buttonDiv}>
+          <div className={classes.card} key={item.id}>
+            <div className={classes.CardComponent}>
+              <CardComponent item={item} />
+            </div>
+
+            <div className={`${classes.buttonDiv} ${classes.visible}`}>
               <div
                 className={classes.button}
-                onClick={() =>
-                  this.props.deleteWatchedList(item.id, this.props.watchedList)
-                }
+                onClick={() => this.infoClickHandler(item)}
               >
-                <i className="fa fa-ban fa-2x"></i>
-              </div>
-              <div
-                className={classes.button}
-                onClick={() =>
-                  this.props.deleteWatchedList(item.id, this.props.watchedList)
-                }
-              >
-                <i className="fa fa-info-circle fa-2x"></i>
+                <i className="fa fa-info-circle fa-3x"></i>
               </div>
             </div>
           </div>
@@ -38,7 +47,16 @@ class WatchedList extends Component {
     return (
       <div>
         <Navbar heading="WatchedList" />
-        <div className={classes.movieList}>{list}</div>
+        <div className={classes.movieList}>
+          {list}
+          {this.state.infoContainer ? (
+            <Modal
+              item={this.state.modalData}
+              modalCloseHandler={this.modalCloseHandler}
+              buttonText="WatchList"
+            />
+          ) : null}
+        </div>
       </div>
     );
   }

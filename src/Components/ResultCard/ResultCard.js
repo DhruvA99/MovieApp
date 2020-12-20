@@ -32,7 +32,7 @@ const ResultCard = (props) => {
             <div className={classes.buttonDiv}>
               <button
                 className={classes.button}
-                disabled={movieWatchDisable}
+                disabled={movieWatchDisable || movieWatchedDisable}
                 onClick={() =>
                   props.onClickHandlerWatchList("watch", props.data)
                 }
@@ -41,7 +41,7 @@ const ResultCard = (props) => {
               </button>
               <button
                 className={classes.button}
-                disabled={movieWatchedDisable}
+                disabled={movieWatchDisable || movieWatchedDisable}
                 onClick={() =>
                   props.onClickHandlerWatchedList("watched", props.data)
                 }
