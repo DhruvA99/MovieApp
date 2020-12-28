@@ -21,7 +21,9 @@ class WatchList extends Component {
     });
   };
   render() {
-    let list = <p className={classes.emptyText}> No Movies in your List!</p>;
+    let list = (
+      <p className={classes.emptyText}> No Movies in your WatchList!</p>
+    );
     if (this.props.watchList.length !== 0) {
       list = this.props.watchList.map((item) => {
         return (
