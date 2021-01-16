@@ -43,7 +43,7 @@ const Modal = (props) => {
           {props.item.poster_path ? (
             <img
               className={classes.image}
-              src={`https://tmdb.org/t/p/w200${props.item.poster_path}`}
+              src={`https://image.tmdb.org/t/p/w300${props.item.poster_path}`}
               alt="posterImage"
             />
           ) : (

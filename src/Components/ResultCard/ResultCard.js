@@ -19,7 +19,7 @@ const ResultCard = (props) => {
         {props.data.poster_path ? (
           <img
             className={classes.image}
-            src={`https://tmdb.org/t/p/w200${props.data.poster_path}`}
+            src={`https://image.tmdb.org/t/p/w300${props.data.poster_path}`}
             alt={`${props.data.movie_title}poster`}
           />
         ) : (
